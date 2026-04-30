@@ -1,0 +1,36 @@
+name: "homeconnect"
+display_name: "Home Connect (Bosch/Siemens)"
+description: "Control Bosch and Siemens appliances via the Home Connect cloud API. Start and stop dishwasher programs, check status, and monitor progress."
+version: "1.0.0"
+min_jarvis_version: "0.9.0"
+license: "MIT"
+author:
+  github: "alexberardi"
+categories: ["smart-home", "appliances"]
+platforms: ["darwin", "linux"]
+keywords: ["bosch", "siemens", "dishwasher", "home connect", "appliance"]
+
+components:
+  - type: device_protocol
+    name: homeconnect
+    path: device_families/homeconnect/protocol.py
+
+packages:
+  - name: httpx
+
+secrets:
+  - key: HOME_CONNECT_CLIENT_ID
+    scope: integration
+    value_type: string
+    description: "OAuth Client ID from developer.home-connect.com"
+    sensitive: false
+  - key: HOME_CONNECT_CLIENT_SECRET
+    scope: integration
+    value_type: string
+    description: "OAuth Client Secret from developer.home-connect.com"
+    sensitive: true
+  - key: HOME_CONNECT_REFRESH_TOKEN
+    scope: integration
+    value_type: string
+    description: "OAuth refresh token (obtained via authorize.py or mobile OAuth)"
+    sensitive: true
