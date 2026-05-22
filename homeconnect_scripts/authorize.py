@@ -5,7 +5,7 @@ Generates an authorization URL, walks the user through the browser login,
 exchanges the code for tokens, and stores the refresh token in JarvisStorage.
 
 Usage:
-    python scripts/authorize.py
+    python homeconnect_scripts/authorize.py
 """
 
 from __future__ import annotations
@@ -17,10 +17,10 @@ import secrets
 import sys
 from pathlib import Path
 
-# Add parent so device_families is importable
+# Add the repo root so homeconnect_shared is importable when run from a checkout.
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from device_families.homeconnect.homeconnect_client import (  # noqa: E402
+from homeconnect_shared.homeconnect_client import (  # noqa: E402
     AUTHORIZE_URL,
     DEFAULT_SCOPES,
     exchange_authorization_code,

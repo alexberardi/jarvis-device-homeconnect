@@ -29,7 +29,7 @@ python scripts/command_store.py install --local /path/to/jarvis-device-homeconne
 
 ```bash
 cd jarvis-device-homeconnect
-python scripts/authorize.py
+python homeconnect_scripts/authorize.py
 ```
 
 The script prompts for credentials, opens a browser for Home Connect login,

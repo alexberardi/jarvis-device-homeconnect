@@ -39,7 +39,7 @@ except ImportError:
             self._log.debug(msg)
 
 
-from homeconnect_client import (
+from homeconnect_shared.homeconnect_client import (
     APPLIANCE_TYPE_TO_DOMAIN,
     AUTHORIZE_URL,
     DEFAULT_SCOPES,
