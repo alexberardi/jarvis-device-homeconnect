@@ -3,7 +3,7 @@ display_name: "Home Connect (Bosch/Siemens)"
 description: "Control Bosch and Siemens appliances via the Home Connect cloud API. Start and stop dishwasher programs, check status, and monitor progress."
 version: "1.0.0"
 min_jarvis_version: "0.9.0"
-license: "MIT"
+license: Apache-2.0
 author:
   github: "alexberardi"
 categories: ["smart-home", "appliances"]
